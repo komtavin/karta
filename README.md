@@ -45,15 +45,27 @@ karta/
             __init__.py
 ```
 
-> **Nota sobre la ubicación del proyecto:** el script asume por defecto que la carpeta `karta/` está en `D:\karta\`. Si guardaste el proyecto en otra unidad o ruta (por ejemplo `C:\proyectos\karta\`), debes abrir `secuenciaNatal.py` con un editor de texto y cambiar la línea:
+> **Nota sobre la ubicación del proyecto:** el proyecto asume por defecto que la carpeta `karta/` está en `D:\karta\`. Si guardaste el proyecto en otra unidad o ruta (por ejemplo `C:\proyectos\karta\`), debes ajustar **dos líneas en dos archivos distintos** antes de ejecutar:
+>
+> **Archivo 1 — `secuenciaNatal.py`**, línea:
 > ```python
 > sys.path.insert(0, 'D:\\karta\\script\\paquetes')
 > ```
-> por la ruta correcta, por ejemplo:
+> Cámbiala a tu ruta, por ejemplo:
 > ```python
 > sys.path.insert(0, 'C:\\proyectos\\karta\\script\\paquetes')
 > ```
-> Usa doble barra invertida `\\` entre cada carpeta.
+>
+> **Archivo 2 — `Query.py`** (dentro de `script/paquetes/`), línea:
+> ```python
+> self.ruta = 'D:\\karta\\efemerides\\swete64\\swete64.exe'
+> ```
+> Cámbiala a tu ruta, por ejemplo:
+> ```python
+> self.ruta = 'C:\\proyectos\\karta\\efemerides\\swete64\\swete64.exe'
+> ```
+>
+> En ambos casos usa doble barra invertida `\\` entre cada carpeta. Si solo ajustas uno de los dos archivos, el otro seguirá buscando en `D:\karta\` y fallará.
 
 ---
 
@@ -142,14 +154,17 @@ exec(compile(open(filepath).read(), filepath, 'exec'))
 
 4. Presiona **Enter**
 
-El script tardará varios minutos (con 49 cartas de 30 minutos). En la consola verás mensajes de progreso como:
+El script tardará varios minutos (con 49 cartas de 30 minutos). Durante ese tiempo **la ventana de Blender quedará sin responder** — esto es normal, no es un error. No cierres Blender ni hagas clic en ningún lado mientras trabaja.
+
+Cuando termine, la consola mostrará todos los mensajes de progreso juntos de una sola vez:
 ```
 setInstantanea carta: 0 | frame: 0
 setInstantanea carta: 1 | frame: 30
 ...
+setInstantanea carta: 48 | frame: 1440
 ```
 
-Cuando termine y vuelva a aparecer el símbolo `>>>`, la animación estará lista. Para reproducirla:
+Y volverá a aparecer el símbolo `>>>`. Ese es el indicador de que la animación está lista. Para reproducirla:
 - Mueve el cursor del mouse **sobre la vista 3D** (el área con los objetos)
 - Presiona la barra **Espacio**
 
