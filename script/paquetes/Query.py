@@ -169,7 +169,7 @@ class Query:
             '-fZPpT',
             '-head',
             '-g TABULADOR ',
-            #MAC#'-gTABULADOR ', the 
+            #MAC#'-gTABULADOR ',
             '-p0123456789mtAFDGHIs',
             '-xs136199',
         ]
