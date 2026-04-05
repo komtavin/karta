@@ -20,8 +20,8 @@ import sys
 from importlib import reload
 
 # Agrega el directorio de paquetes al path. Ajustar según el sistema operativo.
-#WIN#sys.path.insert(0, 'D:\\karta\\script\\paquetes')
-sys.path.insert(0, '/Users/komtavin/Desktop/Proyectos/rukaLab/karta/script/')
+sys.path.insert(0, 'D:\\karta\\script\\paquetes')
+#MAC#sys.path.insert(0, '/Users/komtavin/Desktop/Proyectos/rukaLab/karta/script/')
 
 from SecuenciaAstral import SecuenciaAstral
 from Query import Query
