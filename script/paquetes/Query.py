@@ -74,8 +74,8 @@ class Query:
             deltaPaso: Intervalo entre cartas en formato '-sXm' (ej. '-s30m').
             zonaHoraria: Nombre de zona horaria pytz (ej. 'America/Santiago').
         """
-        #WIN#self.ruta = 'D:\\karta\\efemerides\\swete64\\swete64.exe'
-        self.ruta = '/Users/komtavin/Desktop/Proyectos/rukaLab/karta/efemerides/swisseph-master/swetest'
+        self.ruta = 'D:\\karta\\efemerides\\swete64\\swete64.exe'
+        #MAC#self.ruta = '/Users/komtavin/Desktop/Proyectos/rukaLab/karta/efemerides/swisseph-master/swetest'
         self.fechaLectura = fechaLectura
         self.horaLectura = horaLectura
         self.longitud = longitud
@@ -168,8 +168,8 @@ class Query:
             f'-house{self.longitud},{self.latitud},{self.algoritmo}',
             '-fZPpT',
             '-head',
-            #WIn#'-g TABULADOR ',
-            '-gTABULADOR ',
+            '-g TABULADOR ',
+            #MAC#'-gTABULADOR ', the 
             '-p0123456789mtAFDGHIs',
             '-xs136199',
         ]
