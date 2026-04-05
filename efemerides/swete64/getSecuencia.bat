@@ -1,0 +1,2 @@
+call Z:\efemerides\swete64\swete64.exe  -b13.11.1989 -ut03:45:00 -house-71.654115,-35.430758,p -fZPpT -n52 -s30m -head -gTABULADOR  -p0123456789mtAFDGHIs -xs136199  > Z:\efemerides\swete64\secuenciaQuery.bd
+call Z:\efemerides\swete64\swete64.exe  -b13.11.1989 -ut16:15:00 -house-71.654115,-35.430758,p -fZPpT -n24 -s30m -head -gTABULADOR  -p0123456789mtAFDGHIs -xs136199  > Z:\efemerides\swete64\secuenciaPrincipal.bd
